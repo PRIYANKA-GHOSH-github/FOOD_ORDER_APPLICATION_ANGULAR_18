@@ -1,0 +1,107 @@
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="image/indian.jpg" class="d-block w-100" alt="Indian Food">
+      
+      <div class="carousel-caption d-none d-md-block">
+        
+        <app-search></app-search> 
+        
+        <h5>Indian</h5>
+        <app-tags></app-tags>
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      
+      <img src="image/food-10.webp" class="d-block w-100" alt="Italian Food">
+      <div class="carousel-caption d-none d-md-block">
+        <app-search></app-search> 
+        
+        <h5>Italian</h5>
+        <app-tags></app-tags>
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      
+      <img src="image/chinise.jpg" class="d-block w-100" alt="Chinese Food">
+      <div class="carousel-caption d-none d-md-block">
+        <app-search></app-search> 
+        
+        <h5>Chinese</h5>
+        <app-tags></app-tags>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<app-not-found
+  [visible]="!foods || !foods.length"
+  restLinkText ="Reset-Search"></app-not-found>
+
+<ul>
+  <li *ngFor ="let food of foods">
+  <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="food.name" width="400">
+      <div class ="content">
+          <div class="name">
+              {{food.name}}
+            </div>
+          <span class ="favorite{{food.favorite?'':'not'}}">&#9829;</span>
+         <!--<div class="star">
+              <star-rating
+              [value]="food.stars" [totalstar] ="5" [readonly] ="true"
+              cheaked colour="red" uncheckedcolour="black" size ="22px"></star-rating>
+          </div> -->
+         <!-- <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select> -->
+      
+      <div class ="product-item-footer">
+          <div class="origins">
+              <span *ngFor = "let origin of food.origins">
+                  {{origin}}
+              </span>
+          </div>
+          <div class="cook-time">
+              <span>&#x231A;</span>
+              {{food.cookTime}}
+
+          </div>
+          <div class ="price">
+            <span>
+              ₹
+              {{food.price}}
+            </span>
+          </div>
+
+      </div>
+      </div>
+  </a>
+  </li>
+</ul>
+  

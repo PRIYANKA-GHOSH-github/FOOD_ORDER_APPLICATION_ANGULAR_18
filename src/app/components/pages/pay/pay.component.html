@@ -1,0 +1,44 @@
+
+<div class ="background-container">
+
+<div class="payment-container">
+    <h2>Select Payment Method</h2>
+    
+    <!-- Payment Method Options -->
+    <div class="payment-methods">
+      <!-- PhonePe Option -->
+      <div class="payment-option" (click)="selectPayment('PhonePe')">
+        <img src="image/phonepay.png" alt="PhonePe" class="payment-logo">
+        <span>PhonePe</span>
+      </div>
+      
+      <!-- UPI Option -->
+      <div class="payment-option" (click)="selectPayment('UPI')">
+        <img src="image/upi.png" alt="UPI" class="payment-logo">
+        <span>UPI</span>
+      </div>
+      
+      <!-- Credit Card Options -->
+      <div class="payment-option" (click)="selectPayment('ICICI Card')">
+        <img src="image/icici.jpg" alt="ICICI Card" class="payment-logo">
+        <span>ICICI Credit Card</span>
+      </div>
+      
+      <div class="payment-option" (click)="selectPayment('HDFC Card')">
+        <img src="image/axis.png" alt="AXIS Card" class="payment-logo">
+        <span>AXIS Credit Card</span>
+      </div>
+    </div>
+  
+    <!-- Selected Payment Method Display -->
+    <!-- Correctly using the method and property -->
+    <div class="selected-payment" *ngIf="selectedPaymentMethod">
+    <p>You have selected: <strong>{{ selectedPaymentMethod }}</strong></p>
+    </div>
+  
+  
+    <!-- Proceed Button -->
+    <button class="btn-proceed" (click)="proceedToPayment()">Proceed to Payment</button>
+  </div>
+</div>
+  

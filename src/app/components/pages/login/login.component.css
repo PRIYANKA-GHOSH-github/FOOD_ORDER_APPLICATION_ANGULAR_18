@@ -1,0 +1,101 @@
+/* Ensure the container covers the whole viewport */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/image/dalivary.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+  
+  /* Optional: Add an animated character here 
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    background: url('/image/food-13.GIF ') no-repeat center center; /* Adjust the GIF URL 
+    background-size: contain;
+    opacity: 0.6;
+  }
+  */
+  
+  /* Style for the login form */
+  .login-form {
+    background: linear-gradient(135deg, #9795f0, #fbc8d4);
+    
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: auto;
+    
+    
+  }
+  
+  /* Style for the form heading */
+  .login-form h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  /* Style for form fields */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Style for error messages */
+  .error-list {
+    margin-top: 0.5rem;
+    color: #f8d7da;
+  }
+  
+  .error-list div {
+    font-size: 0.875rem;
+  }
+  
+  /* Style for the submit button */
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  

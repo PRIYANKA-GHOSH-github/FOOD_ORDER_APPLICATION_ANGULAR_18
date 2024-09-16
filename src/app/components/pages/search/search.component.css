@@ -1,0 +1,46 @@
+/* Container for the search component */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem; /* Space above the search bar */
+  }
+  
+  /* Style for the input field */
+  input[type="text"] {
+    width: 400px; /* Length of the search bar */
+    padding: 0.75rem 1rem; /* Padding inside the input */
+    border: 2px solid #ddd; /* Border style */
+    border-radius: 20px 0 0 20px; /* Rounded left corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+    outline: none; /* Remove default outline */
+  }
+  
+  input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+  }
+  
+  /* Style for the search button */
+  button {
+    padding: 0.75rem 1rem; /* Padding inside the button */
+    border: 2px solid #007bff; /* Blue border */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    font-size: 1rem; /* Font size */
+    border-radius: 0 20px 20px 0; /* Rounded right corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth background and border color transition */
+  }
+  
+  button:hover {
+   background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker border on hover */
+  }
+  
+  /* Optional: Add some shadow for a more 3D effect */
+  input[type="text"], button {
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: linear-gradient(135deg, #9795f0, #fbc8d4);
+  }
+  

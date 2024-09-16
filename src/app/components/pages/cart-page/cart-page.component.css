@@ -1,0 +1,146 @@
+.flower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensures the container takes up the full height of the page */
+  background: linear-gradient(135deg, white, #fbc8d4);
+  background-size: cover;
+  
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  margin-bottom: auto;
+  background-color: #f4f4f9; /* Light background color for the page */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Component */
+app-title {
+  justify-content: center;
+  margin-bottom: auto;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Not Found Message */
+app-not-found {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff4d4d; /* Red color for error message */
+  margin: 2rem 0;
+}
+
+/* Cart Items List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* White background for items */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Item Image */
+img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+/* Cart Item Details */
+div {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Quantity Selector */
+select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Price and Remove Button */
+div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.remove-button {
+  background-color: #ff4d4d; /* Red button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+/* Checkout Section */
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* White background for checkout */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.foods-count,
+.total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout a {
+  display: inline-block;
+  background: linear-gradient(135deg, #9795f0, #fbc8d4);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.checkout a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

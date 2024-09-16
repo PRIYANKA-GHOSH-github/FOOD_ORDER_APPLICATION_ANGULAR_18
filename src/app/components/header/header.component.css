@@ -1,0 +1,129 @@
+/* Reset some basic styles */
+body, ul, li, h1, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #9795f0, #fbc8d4);
+     /* Updated background color */
+    color: #ECF0F1; /* Updated text color */
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container to align content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ECF0F1; /* Updated color */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation menu styling */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Menu links styling */
+nav ul li a {
+    color: #ECF0F1; /* Updated color */
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A3C4BC; /* Updated hover color */
+}
+
+/* Cart item badge styling */
+nav ul li a span {
+    background-color: #ECF0F1; /* Updated badge background */
+    color: #34495E; /* Updated badge text color */
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+/* Dropdown menu container */
+.menu-container {
+    cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ECF0F1; /* Updated dropdown background */
+    color: #34495E; /* Updated dropdown text color */
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Dropdown menu links styling */
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #34495E; /* Updated link color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #A3C4BC; /* Updated hover background color */
+    color: #ECF0F1; /* Updated hover text color */
+}
+
+/* Show dropdown menu on hover */
+.menu-container:hover .menu {
+    display: block;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .menu-container:hover .menu {
+        width: 100%;
+    }
+}

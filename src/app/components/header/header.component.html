@@ -1,0 +1,28 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">FLAVOUR FLOW</a>
+        <nav>
+        <ul>
+            <li>
+                <a routerLink="sign-up">Sign Up</a>
+          </li>
+            <li>
+                  <a routerLink="login">Login</a>
+            </li>
+            <li class = "menu-container">
+                <a routerLink="/dashboard">Priyanka</a>
+                 <div class="menu">
+                        <a routerLink="/Profile">Profile</a>
+                        <a routerLink="/order">Order</a>
+                        <a routerLink="/login">logout</a>
+                </div>
+            </li>
+            <li>
+                <a routerLink="/cart-page">
+                    Cart <span>{{cartQuantity}}</span>
+                  </a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    </header>
